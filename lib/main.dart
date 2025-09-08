@@ -5,6 +5,7 @@ import 'package:projectt/ultilss/apptheme.dart';
 
 import 'UI/home/HOME SCREAN.dart';
 import 'UI/home/introscrean.dart';
+import 'UI/tapes/hadith/hadtith deatuils.dart';
 import 'UI/tapes/quran/q/qurandeatils_1.dart';
 import 'UI/tapes/quran/qurandetails.dart';
 void main(){
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget{
         AppRoutes.homeroute:(context)=>HomeScrean(),
         AppRoutes.QuranDetails:(context)=>QuranDetails(),
         AppRoutes.QuranDetails1:(context)=>QuranDetails1(),
+        AppRoutes.HadithDetails:(context)=>HadithDetails(),
 
       },
       theme: AppTheme.darktheme,
