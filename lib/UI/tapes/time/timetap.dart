@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:projectt/ultilss/appcolors.dart';
 import 'package:projectt/ultilss/appstyles.dart';
@@ -37,8 +38,19 @@ class TimeTap extends StatelessWidget {
                 ),
             SizedBox(height:height*0.04 ,),
                 Expanded(
-                    child: ListView.separated(scrollDirection: Axis.horizontal,padding: EdgeInsets.zero,
-                        itemBuilder:(context, index) => TinmeContent(), separatorBuilder: (context, index) => SizedBox(width: width*0.02,), itemCount: 10)),
+                    child: CarouselSlider.builder(
+                      itemCount:10 ,itemBuilder:(context, index, realIndex) => TinmeContent() ,options:  CarouselOptions(
+                      height: 400,
+                      aspectRatio: 16/9,
+                      viewportFraction: 0.3,
+                      initialPage: 0,
+                      enableInfiniteScroll: true,
+                      enlargeCenterPage: true,
+                      enlargeFactor: 0.2,
+                      scrollDirection: Axis.horizontal,
+                    ),
+
+                    )),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
